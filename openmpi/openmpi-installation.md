@@ -23,7 +23,15 @@ module load cuda-toolkit/7.5.18
 Configure and build
 
 ~~~
- ./configure --prefix=/software/openmpi/1.10.3 --with-tm=/opt/pbs/default --with-verbs --with-pvfs2=/opt/orangefs --enable-mpi-fortran --enable-mpi-cxx --with-hwloc=/software/hwloc/1.10.1 --with-cuda=/software/cuda-toolkit/7.5.18 --with-io-romio-flags="--with-file-system=pvfs2+ufs+nfs --with-pvfs2=/opt/orangefs"
+./configure --prefix=/software/openmpi/1.10.3 \
+--with-tm=/opt/pbs/default \
+--with-verbs \
+--with-pvfs2=/opt/orangefs \
+--enable-mpi-fortran \
+--enable-mpi-cxx \
+--with-hwloc=/software/hwloc/1.10.1 \
+--with-cuda=/software/cuda-toolkit/7.5.18 \
+--with-io-romio-flags="--with-file-system=pvfs2+ufs+nfs --with-pvfs2=/opt/orangefs"
 make 
 make install
 ~~~
