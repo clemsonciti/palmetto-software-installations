@@ -82,7 +82,13 @@ and run the GPU package `configure` script
 
 ~~~
 cd GPU
-./configure --enable-parallel --with-scalapack --enable-cuda --with-gpu-arch=sm_35 --with-cuda-dir=/software/cuda-toolkit/7.5.18 --without-magma --with-phigemm
+./configure --enable-parallel \
+--with-scalapack \
+--enable-cuda \
+--with-gpu-arch=sm_35 \
+--with-cuda-dir=/software/cuda-toolkit/7.5.18 \
+--without-magma \
+--with-phigemm
 cd ..
 make -f Makefile.gpu pw-gpu
 ~~~
