@@ -1,5 +1,8 @@
 # Installation of LAMMPS on Palmetto cluster
 
+Download the LAMMPS source code from <http://lammps.sandia.gov/download.html>. The detailed 
+instruction on usage and compilation options are available here <http://lammps.sandia.gov/doc/Manual.html>.
+
 # Simple build of default packages 
 
 Load modules 
