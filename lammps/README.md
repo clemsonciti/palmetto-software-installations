@@ -16,7 +16,7 @@ Unpack and compile the source code
 
 Download Palmetto Makefile 
 
-    PalmettoMakefile=""
+    PalmettoMakefile="https://raw.githubusercontent.com/zziolko/palmetto-software-installations/master/lammps/Makefile.palmetto_gcc"
     cd SRC/MAKE/MINE
     wget $PalmettoMakefile
     cd ../..
@@ -43,7 +43,7 @@ Unpack the source code
 
 Download Palmetto Makefile
 
-    PalmettoMakefile="" 
+    PalmettoMakefile="https://raw.githubusercontent.com/zziolko/palmetto-software-installations/master/lammps/Makefile.palmetto_gcc" 
     cd SRC/MAKE/MINE
     wget $PalmettoMakefile
     cd ../..
@@ -73,7 +73,7 @@ Unpack the source code
 
 Download Palmetto Makefile
 
-    PalmettoMakefile=""
+    PalmettoMakefile="https://raw.githubusercontent.com/zziolko/palmetto-software-installations/master/lammps/Makefile.palmetto_kokkos_cuda_openmpi"
     cd SRC/MAKE/MINE
     wget $PalmettoMakefile
     cd ../..
