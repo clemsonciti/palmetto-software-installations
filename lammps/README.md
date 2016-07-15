@@ -20,15 +20,15 @@ Unpack and compile the source code
 Download Palmetto Makefile 
 
     PalmettoMakefile="https://raw.githubusercontent.com/zziolko/palmetto-software-installations/master/lammps/Makefile.palmetto_gcc"
-    cd SRC/MAKE/MINE
+    cd src/MAKE/MINE
     wget $PalmettoMakefile
     cd ../..
 
 compile LAMMPS
 
-    make palmetto
+    make palmetto_gcc
 
-After this, directory `lammps-18Jun16/src` should contain file `lmp_palmetto`.
+After this, directory `lammps-18Jun16/src` should contain file `lmp_palmetto_gcc`.
 
 # Building with additional packages
 
@@ -47,14 +47,14 @@ Unpack the source code
 Download Palmetto Makefile
 
     PalmettoMakefile="https://raw.githubusercontent.com/zziolko/palmetto-software-installations/master/lammps/Makefile.palmetto_gcc" 
-    cd SRC/MAKE/MINE
+    cd src/MAKE/MINE
     wget $PalmettoMakefile
     cd ../..
 
 Select packages and proceed with compilation
 
     make yes-kokkos
-    make palmetto KOKKOS_DEVICES=OpenMP
+    make palmetto_gcc KOKKOS_DEVICES=OpenMP
 
 # Building GPU enabled LAMMPS with KOKKOS package 
 
@@ -77,7 +77,7 @@ Unpack the source code
 Download Palmetto Makefile
 
     PalmettoMakefile="https://raw.githubusercontent.com/zziolko/palmetto-software-installations/master/lammps/Makefile.palmetto_kokkos_cuda_openmpi"
-    cd SRC/MAKE/MINE
+    cd src/MAKE/MINE
     wget $PalmettoMakefile
     cd ../..
 
