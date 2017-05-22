@@ -22,6 +22,13 @@ module load hwloc/1.10.1
 module load cuda-toolkit/7.5.18
 ~~~
 
+Point to the location of PBS shared libraries
+
+~~~
+export LD_LIBRARY_PATH=/opt/pbs/default/lib:$LD_LIBRARY_PATH
+export LDFLAGS="-L/opt/pbs/default/lib -lpbs -lpthread -lcrypto"
+~~~
+
 Configure and build
 
 ~~~
