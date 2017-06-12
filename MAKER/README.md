@@ -28,6 +28,8 @@ The current downloaded version for this guide is 2.31.9. We first untar MAKER an
 ```
 $ tar xzf maker-2.31.9.tar.gz
 $ cd maker
+
+
 $ more INSTALL
 ```
 The followings are the instructions from INSTALL
@@ -55,36 +57,65 @@ running './Build installdeps' and dependencies will be installed under
 - To support automatic installation of RepeatMasker, make sure that you have your RepoBase account
 ready. 
 
+- Prior to running *./Build installexes*, you will need to modify the `locations` file inside `src` directory. 
+This file lists the locations where maker can go and download the external libraries. Run `nano locations` to open
+this file. 
+
+- Change the `Linux_x86_64` location of `RepBase` to *'http://www.girinst.org/server/RepBase/protected/repeatmaskerlibraries/RepBaseRepeatMaskerEdition-20170127.tar.gz'* 
+
+- Change the `Linux_x86_64` location of `exonerate` to *'http://ftp.ebi.ac.uk/pub/software/vertebrategenomics/exonerate/exonerate-2.2.0-x86_64.tar.gz'*
+
+- Run the installation steps using `./Build`
+
 ```
 $ ./Build installdeps
 $ ./Build installexes
 ```
 
-4.  If anything fails, either use the ./Build file commands to retry the failed   
-section (i.e. './Build installdeps' and './Build installexes') or follow the 
-detailed install instructions in the next section to manually install missing                                                                   modules or programs. Use ./Build status to see available commands.           
-./Build status           #Shows a status menu                                                                                                   ./Build installdeps      #installs missing PERL dependencies                                                                                    ./Build installexes      #installs missing external programs                                                                                    ./Build install          #installs MAKER                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Note: For failed auto-download of external tools, when using the command                                                                        './Build installexes', the .../maker/src/locations file is used to identify                                                                     download URLs. You can edit this file to point to any alternate locations.
+You can check status of dependency installation by running `./Build status`. The outcome should contain 
+the followings:
 
+```
+==============================================================================
+STATUS MAKER v2.31.9
+==============================================================================                                                          
+PERL Dependencies:      VERIFIED       
+External Programs:      VERIFIED 
+External C Libraries:   VERIFIED
+MPI SUPPORT:            DISABLED 
+MWAS Web Interface:     DISABLED 
+MAKER PACKAGE:          CONFIGURATION OK
+```
+Finally, run the MAKER installation
 
-
+```
+$ ./Build install          
+```
 
 ## Install wq_maker in the bin directory of the MAKER installation.
 
+```
+$ cd ../bin
+$ wget https://github.com/cooperative-computing-lab/cctools/raw/master/apps/wq_maker/wq_maker
+```
 
-## Run './wq_maker -g <FASTA_FILE' to annotate sequences in file <FASTA_FILE>.
+- You will need to modify `wq_maker` to point it to the location of the supporting Perl
+libraries of CCTools:
 
+```
+$ nano wq_maker
+```
 
-## Start workers:
-work_queue_worker -d all <HOSTNAME> <PORT>
-where <HOSTNAME> is the name of the host on which the master is running
-	  <PORT> is the port number on which the master is listening.
+- Insert the line *use lib '/home/lngo/software/maker/cctools/lib/perl5/site_perl/5.16.3/';* under *user warnings;*
+- Type Ctrl-X to exit and select *Y* to save the edited wq_maker file. 
+- Export Maker tools:
 
-Alternatively, you can also specify a project name for the master and use that
-to start workers:
+```
+$ export PATH='~/software/maker/maker/bin':$PATH
+```
 
-1. ./wq_maker -g agambiae.fa -N WQMAKER
-2. work_queue_worker -d all -N WQMAKER
+You can test that Maker is now working with wq_maker by listing the command-line options:
 
-For listing the command-line options, do:
+```
 ./wq_maker -h
-
+```
