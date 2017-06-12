@@ -4,8 +4,8 @@ First, from home directory, we create a parent directory that will contain all o
 
 ```
 $ cd ~
-$ mkdir -p software/maker
-$ cd software/maker
+$ mkdir -p software
+$ cd software
 ```
 
 ## Install CCTools.
@@ -22,14 +22,14 @@ $ cd ..
 
 ## Instal MAKER and all its required dependencies. 
 
-MAKER can be download from: http://www.yandell-lab.org/software/maker.html. Downloading MAKER is free but requires registration. 
-The current downloaded version for this guide is 2.31.9. We first untar MAKER and review the README file. 
+MAKER can be download from: http://www.yandell-lab.org/software/maker.html.  
+The current downloaded version for this guide is 2.31.9. However, CCtools only supports
+up to version 2.31.8 at the moment.  
 
 ```
-$ tar xzf maker-2.31.9.tar.gz
+$ wget http://yandell.topaz.genetics.utah.edu/maker_downloads/static/maker-2.31.8.tgz
+$ tar xzf maker-2.31.8.tar.gz
 $ cd maker
-
-
 $ more INSTALL
 ```
 The followings are the instructions from INSTALL
@@ -47,14 +47,14 @@ $ perl Build.PL
 
 **Note: ** 
 
-- You do not need to be root.  Just say 'yes' to 'local install' when 
+- You do not need to be root.  Just say 'Y' to 'local install' when 
 running './Build installdeps' and dependencies will be installed under 
 .../maker/perl/lib, also missing external tools will be installed under 
 .../maker/exe when running './Build installexes'.  
 
 - When you are asked for testing dependencies, you can select **Y** instead of the default **N**. 
 
-- To support automatic installation of RepeatMasker, make sure that you have your RepoBase account
+- To support automatic installation of RepeatMasker, make sure that you have your RepoBase account and password
 ready. 
 
 - Prior to running *./Build installexes*, you will need to modify the `locations` file inside `src` directory. 
@@ -77,7 +77,7 @@ the followings:
 
 ```
 ==============================================================================
-STATUS MAKER v2.31.9
+STATUS MAKER v2.31.8
 ==============================================================================                                                          
 PERL Dependencies:      VERIFIED       
 External Programs:      VERIFIED 
@@ -106,7 +106,7 @@ libraries of CCTools:
 $ nano wq_maker
 ```
 
-- Insert the line *use lib '/home/lngo/software/maker/cctools/lib/perl5/site_perl/5.16.3/';* under *user warnings;*
+- Insert the line *use lib '/home/lngo/software/cctools/lib/perl5/site_perl/5.16.3/';* under *user warnings;*
 - Type Ctrl-X to exit and select *Y* to save the edited wq_maker file. 
 - Export Maker tools:
 
