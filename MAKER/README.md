@@ -111,7 +111,7 @@ $ nano wq_maker
 - Export Maker tools:
 
 ```
-$ export PATH='~/software/maker/maker/bin':$PATH
+$ export PATH='~/software/maker/bin':$PATH
 ```
 
 You can test that Maker is now working with wq_maker by listing the command-line options:
