@@ -13,10 +13,10 @@ $ cd software
 ```
 $ git clone https://github.com/cooperative-computing-lab/cctools cctools-source
 $ cd cctools-source
-$ ./configure --prefix=~/software/maker/cctools
+$ ./configure --prefix=~/software/cctools
 $ make
 $ make install
-$ export PATH=${HOME}/software/maker/cctools/bin:$PATH
+$ export PATH=${HOME}/software/cctools/bin:$PATH
 $ cd ..
 ```
 
