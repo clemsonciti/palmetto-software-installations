@@ -106,7 +106,7 @@ libraries of CCTools:
 $ nano wq_maker
 ```
 
-- Insert the line *use lib '/home/lngo/software/cctools/lib/perl5/site_perl/5.16.3/';* under *user warnings;*
+- Insert the line *use lib '/home/USERNAME/software/cctools/lib/perl5/site_perl/5.16.3/';* under *user warnings;*. Make sure to replace USERNAME with your actual Palmetto user name. 
 - Type Ctrl-X to exit and select *Y* to save the edited wq_maker file. 
 - Export Maker tools:
 
