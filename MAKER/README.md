@@ -108,10 +108,10 @@ $ nano wq_maker
 
 - Insert the line *use lib '/home/USERNAME/software/cctools/lib/perl5/site_perl/5.16.3/';* under *user warnings;*. Make sure to replace USERNAME with your actual Palmetto user name. 
 - Type Ctrl-X to exit and select *Y* to save the edited wq_maker file. 
-- Export Maker tools:
+- Export Maker tools (replace USERNAME with your Palmetto username):
 
 ```
-$ export PATH='~/software/cctools/bin':'~/software/maker/bin':$PATH
+$ export PATH=/home/USERNAME/software/cctools/bin:/home/USERNAME/software/maker/bin:$PATH
 ```
 
 You can test that Maker is now working with wq_maker by listing the command-line options:
