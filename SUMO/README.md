@@ -2,6 +2,7 @@ MAKER installation is based on instructions located at the [wq_maker app of CCTo
 
 First, from home directory, we create a parent directory that will contain all of MAKER's core libraries and dependencies. All download and installation steps will happen within the boundary of this directory. 
 
+```
  822  cd gdal-2.2.0/
   823  make
   824  make install
@@ -41,7 +42,8 @@ First, from home directory, we create a parent directory that will contain all o
   858  ls
   859  ./configure --prefix=$HOME/software/sumo/0.30.0 --with-fox-config=$HOME/software/fox/1.6.54/bin/fox-config --with-proj-gdal=$HOME/software/gdal/2.2.0 --with-xerces=$HOME/software/xerces-c/3.1.4
   860  ./configure --help
-  861  ./configure --prefix=$HOME/software/sumo/0.30.0 --with-fox-config=$HOME/software/fox/1.6.54/bin/fox-config --with-proj-libraries=$HOME/software/proj/4.9.3/lib --with-proj-includes=$HOME/software/proj/4.9.3/include --with-gdal-libraries=$HOME/software/gdal/2.2.0/lib --with-gdal-includes=$HOME/software/gdal/2.2.0/include --with-gdal-config=$HOME/software/gdal/2.2.0/bin/gdal-config  --with-xerces=$HOME/software/xerces-c/3.1.4 --with-python
+  861  
   862  make
   863  make install
   864  ls
+```
