@@ -1,6 +1,6 @@
-MAKER installation is based on instructions located at the [wq_maker app of CCTools](https://github.com/cooperative-computing-lab/cctools/tree/master/apps/wq_maker)
+Sumo installation is based on instructions located at the [Sumo Traffic Simulator](http://sumo.dlr.de/wiki/Installing/Linux_Build)
 
-First, from home directory, we create a parent directory that will contain all of MAKER's core libraries and dependencies. All download and installation steps will happen within the boundary of this directory. 
+## Install dependencies
 
 ```
  822  cd gdal-2.2.0/
@@ -31,6 +31,11 @@ First, from home directory, we create a parent directory that will contain all o
   847  ./configure --prefix=$HOME/software/xerces-c/3.1.4
   848  make
   849  make install
+  ```
+  
+  ## Install SUMO
+  
+  ```
   850  cd ~/tmp/
   851  ls
   852  svn
