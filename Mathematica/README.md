@@ -9,8 +9,8 @@ project: http://www.wolfram.com/mathematica/?source=frontpage-quick-links
 1. Read <https://ccit.clemson.edu/support/faculty-staff/software/individual-licenses/?id=475&l=1>
 for details about access to Mathematica
 2. Download 
-3. `@util01 # ./Mathematica_11.1.1_LINUX.sh` which will ask for the installation directory `/software/mathematica/11.1` and scripts directory `/software/mathematica/11.1/bin
-4. Create a license file /software/mathematica/11.1/share/Licensing/mathpass
+3. `@util01 # ./Mathematica_11.1.1_LINUX.sh` which will ask for the installation directory `/software/mathematica/11.1` and scripts directory `/software/mathematica/11.1/bin`
+4. Create a license file `/software/mathematica/11.1/share/Licensing/mathpass`
 
 ```
 $ cat /software/mathematica/11.1/share/Licensing/mathpass 
