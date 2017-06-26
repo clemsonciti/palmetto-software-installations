@@ -1,9 +1,8 @@
---
+---
 name: Mathematica
 version: 11.1
 project: http://www.wolfram.com/mathematica/?source=frontpage-quick-links
---
-
+---
 
 # Installation
 
