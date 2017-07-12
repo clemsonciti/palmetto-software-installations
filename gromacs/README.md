@@ -1,3 +1,10 @@
+---
+name: GROMACS
+version: 2016.3
+project: http://www.gromacs.org/
+installation: http://manual.gromacs.org/documentation/2016.3/install-guide/index.html
+---
+
 # Compilation
 
 Lets start with the interactive session with GPUs and 20 cores for things to get quickly
@@ -17,6 +24,7 @@ $ mkdir gromacs-build
 $ cd gromacs-build
 $ wget http://ftp.gromacs.org/pub/gromacs/gromacs-2016.3.tar.gz
 $ tar xvf gromacs-2016.3.tar.gz
+$ cd gromacs-2016.3
 
 $ module load cmake/3.6.1
 $ module load intel/16.0
