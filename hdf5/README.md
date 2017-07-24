@@ -43,7 +43,7 @@ prepend-path  LD_LIBRARY_PATH  "/software/hdf5/1.10.1/lib"
 
 ```
 $ qsub -I
-$ wget wget https://support.hdfgroup.org/ftp/HDF5/current/src/unpacked/examples/h5_crtdat.c
+$ wget https://support.hdfgroup.org/ftp/HDF5/current/src/unpacked/examples/h5_crtdat.c
 $ module load intel/17.0
 $ module load openmpi/1.10.3
 $ module load hdf5/1.10.1
