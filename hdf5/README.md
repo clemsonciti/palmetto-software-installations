@@ -27,7 +27,7 @@ make install
 
 Flags `--enable-cxx` and `--enable-parallel` are in conflict but 
 `--enable-unsupported`. The compilation of tests requires linking to
-`libpbs` and SSL specific functions (hence LIBS="-lcrypto -lssl").  
+`libpbs` and SSL specific functions (hence `LIBS="-lcrypto -lssl"`).  
 
 # Module file 
 
