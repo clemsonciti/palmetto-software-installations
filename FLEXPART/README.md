@@ -63,4 +63,6 @@ Should produce the file `FLEXPART_GFS_GFORTRAN`
 * Input files required are provided in "Example meteo files"
 * In example folder, change the datetimes in `Options/COMMAND` and `Options/RELEASE`
 to datetimes available in the data folder (see `Metfiles/GFS/AVAILABLE`)
+* Change `pathnames` file in example folder to appropriate locations. Also need
+to add one empty line at the end after `=============`.
 * From example folder, run `FLEXPART_GFS_GFORTRAN`
