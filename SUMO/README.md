@@ -10,25 +10,31 @@ mkdir -p tmp
 
 ## Install dependencies
 
-### gdal-2.2.0
+### gdal
 
 ```
 cd ~/tmp
 wget http://download.osgeo.org/gdal/2.2.0/gdal-2.2.0.tar.gz
 tar xzf gdal-2.2.0.tar.gz
 cd gdal-2.2.0/
-./configure --prefix=/home/$USER/software/gdal/2.2.0
+./configure --prefix=/$HOME/software/gdal/2.2.0
 make
 make install
 ```
 
-  825  cd ~/tmp/
-  826  tar xzf proj-4.9.3.tar.gz
-  827  cd proj-4.9.3/
-  828  ./configure --prefix=$HOME/software/proj/4.9.3
-  829  make
-  830  make install
-  831  cd ~/tmp
+### proj
+
+```
+cd ~/tmp/
+wget http://download.osgeo.org/proj/proj-4.9.3.tar.gz
+tar xzf proj-4.9.3.tar.gz
+cd proj-4.9.3/
+./configure --prefix=$HOME/software/proj/4.9.3
+make
+make install
+```
+
+831  cd ~/tmp
   832  tar xzf xerces-c-3.1.4.tar.gz
   833  cd xerces-c-3.1.4/
   834  more INSTALL
