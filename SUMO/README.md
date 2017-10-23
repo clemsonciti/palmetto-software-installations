@@ -10,6 +10,19 @@ mkdir -p tmp
 
 ## Install dependencies
 
+
+### fox
+
+```
+cd ~/tmp
+wget ftp://ftp.fox-toolkit.org/pub/fox-1.6.55.tar.gz
+tar xzf fox-1.6.55.tar.gz
+cd fox-1.6.55/
+./configure --prefix=/$HOME/software/fox/1.6.55
+make
+make install
+```
+
 ### gdal
 
 ```
@@ -46,22 +59,14 @@ make
 make install
 ```
   
-  ## Install SUMO
+## Install SUMO
   
-  ```
-  850  cd ~/tmp/
-  851  ls
-  852  svn
-  853  svn co https://svn.code.sf.net/p/sumo/code/trunk/sumo
-  854  cd sumo
-  855  ls
-  856  make -f Makefile.cvs
-  857  ld
-  858  ls
-  859  ./configure --prefix=$HOME/software/sumo/0.30.0 --with-fox-config=$HOME/software/fox/1.6.54/bin/fox-config --with-proj-gdal=$HOME/software/gdal/2.2.0 --with-xerces=$HOME/software/xerces-c/3.1.4
-  860  ./configure --help
-  861  
-  862  make
-  863  make install
-  864  ls
+```
+cd ~/tmp/
+svn co https://svn.code.sf.net/p/sumo/code/trunk/sumo
+cd sumo
+make -f Makefile.cvs
+./configure --prefix=$HOME/software/sumo/0.30.0 --with-fox-config=$HOME/software/fox/1.6.55/bin/fox-config --with-proj-gdal=$HOME/software/gdal/2.2.0 --with-xerces=$HOME/software/xerces-c/3.1.4
+make
+make install
 ```
