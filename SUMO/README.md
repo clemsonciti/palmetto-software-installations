@@ -1,11 +1,27 @@
 Sumo installation is based on instructions located at the [Sumo Traffic Simulator](http://sumo.dlr.de/wiki/Installing/Linux_Build)
 
-## Install dependencies
+## Preperation
 
 ```
- 822  cd gdal-2.2.0/
-  823  make
-  824  make install
+cd ~
+mkdir -p software
+mkdir -p tmp
+```
+
+## Install dependencies
+
+### gdal-2.2.0
+
+```
+cd ~/tmp
+wget http://download.osgeo.org/gdal/2.2.0/gdal-2.2.0.tar.gz
+tar xzf gdal-2.2.0.tar.gz
+cd gdal-2.2.0/
+./configure --prefix=/home/$USER/software/gdal/2.2.0
+make
+make install
+```
+
   825  cd ~/tmp/
   826  tar xzf proj-4.9.3.tar.gz
   827  cd proj-4.9.3/
