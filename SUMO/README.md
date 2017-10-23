@@ -34,26 +34,17 @@ make
 make install
 ```
 
-831  cd ~/tmp
-  832  tar xzf xerces-c-3.1.4.tar.gz
-  833  cd xerces-c-3.1.4/
-  834  more INSTALL
-  835  ls
-  836  autoconf
-  837  ls
-  838  export XERCESCROOT='/home/lngo/tmp/xerces-c-3.1.4'
-  839  cd $XERCESCROOT
-  840  cd src/xercesc/
-  841  ls
-  842  autoconf
-  843  cd ..
-  844  module avail
-  845  cd ..
-  846  ls
-  847  ./configure --prefix=$HOME/software/xerces-c/3.1.4
-  848  make
-  849  make install
-  ```
+### xerces
+
+```
+cd ~/tmp
+wget http://archive.apache.org/dist/xerces/c/3/sources/xerces-c-3.1.4.tar.gz
+tar xzf xerces-c-3.1.4.tar.gz
+cd xerces-c-3.1.4/
+./configure --prefix=$HOME/software/xerces-c/3.1.4
+make
+make install
+```
   
   ## Install SUMO
   
