@@ -4,14 +4,14 @@
 
 ```
 mkdir -p ~/software ~/modulefiles
-./rust-custom-installer/rust-custom-installer.bash 1.20.0 ~/software ~/modulefiles
+./rust-custom-installer.bash 1.23.0 ~/software ~/modulefiles
 ```
 
 ## As root
 ### Command executed on "master" or "util" node
 
 ```
-./rust-custom-installer/rust-custom-installer.bash 1.20.0 /software /software/modulefiles
+./rust-custom-installer.bash 1.23.0 /software /software/modulefiles
 ```
 
 ## Notes:
