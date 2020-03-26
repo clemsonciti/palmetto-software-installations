@@ -1,0 +1,39 @@
+##UCX configure statement
+./contrib/configure-release --prefix=/software/UCX/1.7.0-47 --with-mlx5-dv --with-rc --with-ud --with-dc --with-ib=hw-tm --with-dm --with-cuda=/software/cuda-toolkit/10.2.89
+
+##Openmpi 3.1.4 with Intel 18
+module load intel/18.0
+./configure --prefix=/software/openmpi/3.1.4-int18-ucx17 \
+--with-tm=/opt/pbs/default \
+--without-verbs \
+--with-ucx=/software/UCX/1.7.0 \
+--enable-mpi-fortran \
+--enable-mpi-cxx \
+--with-pvfs2 \
+--with-cuda=/software/cuda-toolkit/10.2.89 \
+--with-io-romio-flags="--with-file-system=pvfs2+ufs+nfs"
+
+##OpenMPI with GCC 8.2
+module load gcc/8.2.0
+./configure --prefix=/software/openmpi/4.0.1-gcc82-ucx17 \
+--with-tm=/opt/pbs/default \
+--without-verbs \
+--with-ucx=/software/UCX/1.7.0 \
+--enable-mca-no-build=btl-uct \
+--enable-mpi-fortran \
+--enable-mpi-cxx \
+--with-pvfs2 \
+--with-cuda=/software/cuda-toolkit/10.2.89 \
+--with-io-romio-flags="--with-file-system=pvfs2+ufs+nfs"
+
+##OpenMPI 3.0.4 with GCC 4.8.5
+
+./configure --prefix=/software/openmpi/3.0.4-gcc485-ucx17 \
+--with-tm=/opt/pbs/default \
+--without-verbs \
+--with-ucx=/software/UCX/1.7.0 \
+--enable-mpi-fortran \
+--enable-mpi-cxx \
+--with-pvfs2 \
+--with-cuda=/software/cuda-toolkit/10.2.89 \
+--with-io-romio-flags="--with-file-system=pvfs2+ufs+nfs"
